@@ -28,6 +28,12 @@ export const App = class App extends React.Component {
                 <Nav.Link href="/finnid">Finn ID</Nav.Link>
              
                 <Nav.Link href="/dokumentasjon">Dokumentasjon</Nav.Link>
+
+                {/* 1. EPJ-simulator (previously HAPI)
+                    2. Søk i HAPI (previously Home)
+                    3. Finn ID (previously Get ID)
+                    4. Dokumentasjon (previously Documentation) 
+                */}
             
             </Nav>
 
