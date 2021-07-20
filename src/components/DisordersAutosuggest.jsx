@@ -82,18 +82,17 @@ export default class DisordersAutosuggest extends React.Component {
                 .then((response) => response.json())
                 .then((data) => {
                   console.log("Code system: " + selectedCodeSystem.id, data);
+
                   let code = undefined;
                   // Check if array is not empty (means that there is no info for this term, probably its children have)
-                  if (data && Array.isArray(data.items) && data.items.length > 0) { //check if object is not empty
+                  if (data && Array.isArray(data.items) && data.items.length > 0) {
+
                     // 1. check that code exests (for any reason?) and 2. if it !== undefined to make a condition
-                    
                       if (data.items[0]?.additionalFields?.mapTarget !== undefined) {
                       // create and fill $codeSystemResult object on each of 10 items in Snomed term search result
 
                       // replace from internal loop data.items.forEach to the if(selectedCodeSystem) to make the pushing array depended on the code system:
-                       
-                        code = data.items[0]?.additionalFields?.mapTarget;
-                      
+                      code = data.items[0]?.additionalFields?.mapTarget;
                     }
                   }
                 
@@ -101,13 +100,13 @@ export default class DisordersAutosuggest extends React.Component {
                     codeSystem: selectedCodeSystem.id,
                     code: code || 'None'
                   }
+
                   items.push(el);
 
                 });
 
                 promises.push(codeSystemPromise);
               }
-              
               
             });
             

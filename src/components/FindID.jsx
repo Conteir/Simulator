@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import { enviroments } from '../config.ts';
-import HTMLRender from '../htmlRenderComponent.jsx';
+import HTMLRender from './htmlRenderComponent.jsx';
 import { Spinner } from 'reactstrap';
 
 export const FindID = class FindID extends React.Component {

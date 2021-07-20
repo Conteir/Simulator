@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../index.css";
-import DisordersAutosuggest from "../DisordersAutosuggest";
-import { HTMLRender } from "../htmlRenderComponent";
+import DisordersAutosuggest from "./DisordersAutosuggest";
+import { HTMLRender } from "./htmlRenderComponent";
 import { codeSystemEnv, params, helsedirBaseUrl } from "../config.ts";
 import { Spinner } from "reactstrap";
 // import GetParamComponent from "./GetParamComponent.jsx";
@@ -271,7 +271,7 @@ export const EPJSimulator = class Record extends React.Component {
                 onChange={(evt) => this.setState({ env: evt.target.value })}
               >
                 <option value="" select="default">
-                  Choose target code system
+                  Velg kontekst
                 </option>
                 {/* Rend  er options dynamically from codeSystemEnv */}
                 {codeSystemEnv.map((codeSystem, key) => (
@@ -310,7 +310,7 @@ export const EPJSimulator = class Record extends React.Component {
                   id="funn"
                   type="text"
                   autoComplete="off"
-                  placeholder="funn"
+                  placeholder=""
                 />
               </div>
             </div>
@@ -324,7 +324,7 @@ export const EPJSimulator = class Record extends React.Component {
                   id="vurdering"
                   type="text"
                   autoComplete="off"
-                  placeholder="vurdering"
+                  placeholder=""
                 />
               </div>
             </div>
@@ -338,7 +338,7 @@ export const EPJSimulator = class Record extends React.Component {
                   id="tiltak"
                   type="text"
                   autoComplete="off"
-                  placeholder="tiltak"
+                  placeholder=""
                 />
               </div>
             </div>

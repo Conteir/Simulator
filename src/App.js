@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { FindID } from '../components/pages/FindID.jsx';
-import { SearchInHAPI } from '../components/pages/SearchInHAPI.jsx';
-import { Documentation } from '../components/pages/Documentation.jsx';
-import { EPJSimulator } from '../components/pages/EPJSimulator.jsx';
+import { FindID } from './components/FindID.jsx';
+import { SearchInHAPI } from './components/SearchInHAPI';
+import { Documentation } from './components/Documentation';
+import { EPJSimulator } from './components/EPJSimulator';
 import Nav from 'react-bootstrap/Nav';
 
 

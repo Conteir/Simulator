@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../pages/../../index.css';
+import '../index.css';
 
 export const Documentation = class Documentation extends React.Component {
 

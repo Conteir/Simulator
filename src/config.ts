@@ -51,7 +51,7 @@ export const codeSystems = [
   export let branchICD10: string = 'MAIN/SNOMEDCT-NO';
   export let branchICPC2: string = 'MAIN/ICPC-2';
   export let branchHelsedir: string = 'MAIN/SNOMEDCT-NO/HELSEDIREKTORATET';
-  export let testBranch: string = 'MAIN/SNOMEDCT-NO/TESTBRANCH';
+  // export let testBranch: string = 'MAIN/SNOMEDCT-NO/TESTBRANCH';
 
 
   export let urlParameters: string = '?limit=10&active=true&groupByConcept=true&semanticTags=disorder&semanticTags=finding&language=no&language=nb&language=nn&language=en&conceptActive=true';
@@ -62,26 +62,25 @@ export const codeSystems = [
   }
 
   export const codeSystemEnv = [
-    /*
+  
     {
       id: "ICPC-2",
       title: "Primærhelsetjenesten (ICPC-2)",
       url: terminlogyServer + '/browser/' + branchICPC2 + '/members' + urlParameters + '&referenceSet=450993002'
         + '&referencedComponentId='
     },
-    */
     {
       id: "ICD-10",
       title: "Spesialisthelsetjenesten (ICD-10)",
       url: terminlogyServer + '/browser/' + branchICD10 + '/members' + urlParameters + '&referenceSet=447562003'
         + '&referencedComponentId='
     },
-    {
+    /*{
       id: "TESTBRANCH",
       title: "TESTBRANCH",
       url: terminlogyServer + '/browser/' + testBranch + '/members' + urlParameters + '&referenceSet=450993002'
         + '&referencedComponentId='
-    }
+    }*/
   ]
 
   export const params = {
