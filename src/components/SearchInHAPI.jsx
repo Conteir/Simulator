@@ -128,10 +128,10 @@ export const SearchInHAPI = class SearchInHAPI extends React.Component {
     let promise = this.linkPromise(link.href);
     //when promise completed, set title:
     promise.then(data => {
-      if (data.kortTittel) { // adding kortTitle as a name of the links
-        link.$title = data.kortTittel;
+      if (data?.kortTittel) { // adding kortTitle as a name of the links
+        link.$title = data?.kortTittel;
       } else
-      link.$title = data.tittel;
+      link.$title = data?.tittel;
     });
     return promise;
   }
@@ -152,7 +152,11 @@ export const SearchInHAPI = class SearchInHAPI extends React.Component {
           'Ocp-Apim-Subscription-Key': key
         }
       }
-    ).then(response => response.json());
+    ).then(response => response.json())
+    .then(data => {
+      console.log(data);
+      this.setState( {showSpinner: false} );
+    });
     return promise; //to the getLinkData f
   }
 

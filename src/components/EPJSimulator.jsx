@@ -75,7 +75,7 @@ export const EPJSimulator = class Record extends React.Component {
       });
 
       // Text render demo (commented out now) START
-      if (data[0].tekst) {
+      if (data[0]?.tekst !== undefined) {
         this.setState({ content: data[0].tekst });
       }
       // Text render demo (commented out now) END
